@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Cristiano | ICS2O-Unit0-00-HTML | Date 2022 -->
+<!-- Cristiano | ICS2O-Unit3-02-HTML | March 31 2022 -->
 <html lang="en-ca">
   <head>
     <meta charset="utf-8">
@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="./css/style.css">
-    <title>My Website</title>
+    <title>Calculating Volume of a Pyramid</title>
   </head>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -23,7 +23,7 @@
       <header class="mdl-layout__header">
         <div class="mdl-layout-icon"></div>
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout__title">My Website</span>
+          <span class="mdl-layout__title">Calculating Volume of a Pyramid</span>
           <div class="mdl-layout-spacer"></div>
           <nav class="mdl-navigation">
             <a class="mdl-navigation__link" href="./">Index</a>
@@ -34,10 +34,37 @@
     <br>
     <br>
     <br>
-    <h1>Hello, World!</h1>
+    <h1>Formula:</h1>
+    <img src="./img/pyramid.png" alt="Image of a Pyramid">
+    <p>V = (L × W × h) ÷ 3</p>
+    <!-- Length Input -->
+    <form action="#">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="length">
+        <label class="mdl-textfield__label" for="length">Length</label>
+        <span class="mdl-textfield__error">Input is not a number!</span>
+      </div>
+    </form>
+    <!-- Width Input -->
+    <form action="#">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="width">
+        <label class="mdl-textfield__label" for="width">Width</label>
+        <span class="mdl-textfield__error">Input is not a number!</span>
+      </div>
+    </form>
+    <!-- Height Input -->
+    <form action="#">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="height">
+        <label class="mdl-textfield__label" for="height">Height</label>
+        <span class="mdl-textfield__error">Input is not a number!</span>
+      </div>
+    </form>
     <!-- Accent-colored raised button with ripple -->
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="onButtonClick()">
-      Alert
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="calculate()">
+      Calculate
     </button>
+    <div id="output"></div>
   </body>
 </html>

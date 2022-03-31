@@ -1,11 +1,16 @@
 // Cristiano
-// ICS2O-Unit0-00-HTML
-// Date 2022
+// ICS2O-Unit3-02-HTML
+// March 31 2022
 
 'use strict'
 /**
- * Alerts "Hello, World!"
+ * Calculates the volume of a pyramid using length, width and height the user provides in number fields.
  */
-function onButtonClick() {
-  alert("Hello, World!")
+function calculate() {
+  const length = parseFloat(document.getElementById("length").value)
+  const width = parseFloat(document.getElementById("width").value)
+  const height = parseFloat(document.getElementById("height").value)
+  const answer = (length * width * height) / 3
+
+  document.getElementById("output").innerHTML = "<br><p>The volume of this pyramid is " + answer + "cm³</p>"
 }
